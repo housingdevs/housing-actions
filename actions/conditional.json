@@ -1,0 +1,7 @@
+{
+    "conditions": [],
+    "match_any_condition": 0,
+    "if_actions": [],
+    "else_actions": [],
+    "type":"CONDITIONAL"
+}
