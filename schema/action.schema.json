@@ -1,0 +1,46 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type":"object",
+    "properties": {
+        "type": { "type": "string", "enum": [
+            "CONDITIONAL",
+            "CANCEL_EVENT",
+            "EXIT",
+            "CHANGE_PLAYER_GROUP",
+            "KILL",
+            "FULL_HEAL",
+            "SPAWN",
+            "TITLE",
+            "ACTION_BAR",
+            "RESET_INVENTORY",
+            "SET_MAX_HEALTH",
+            "PARKOUR_CHECKPOINT",
+            "GIVE_ITEM",
+            "REMOVE_ITEM",
+            "SEND_MESSAGE",
+            "POTION_EFFECT",
+            "CLEAR_EFFECTS",
+            "GIVE_EXP_LEVELS",
+            "SEND_TO_LOBBY",
+            "CHANGE_STAT",
+            "CHANGE_GLOBAL_STAT",
+            "TELEPORT_PLAYER",
+            "BAIL_PARKOUR",
+            "PLAY_SOUND",
+            "SET_COMPASS_TARGET",
+            "SET_GAMEMODE",
+            "SET_HEALTH",
+            "SET_HUNGER_LEVEL",
+            "RANDOM_ACTION",
+            "USE_HELD_ITEM",
+            "TRIGGER_FUNCTION",
+            "APPLY_LAYOUT",
+            "ENCHANT_HELD_ITEM",
+            "PAUSE",
+            "SET_PLAYER_TEAM",
+            "CHANGE_TEAM_STAT",
+            "DISPLAY_MENU"
+        ]
+        }
+    }
+}

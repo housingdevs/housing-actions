@@ -6,6 +6,9 @@
 - Action options are snake_case versions of their ingame name.
 - WIP
 
+## FYI
+Conditions & other actions & parameters not in item actions are assumed from context clues & subject to change.
+
 ## Utilities (JS)
 Convert integer to boolean
 ```js
