@@ -2,8 +2,9 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://raw.githubusercontent.com/housingdevs/housing-actions/main/schema/action.schema.json",
     "title": "Action",
-
     "type":"object",
+
+    "required":["type"],
     "properties": {
         "type": { "type": "string", "enum": [
                 "CONDITIONAL",
