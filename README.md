@@ -1,4 +1,8 @@
 # housing-actions
+> [!WARNING]
+> This is currently in very heavy development. Do NOT use for large scale projects. Thanks!
+
+Housing Actions JSON standard
 
 ## Format
 - Booleans are 0 or 1, you can differ from this in your project but please keep this format consistent to that.
