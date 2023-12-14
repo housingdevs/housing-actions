@@ -41,7 +41,8 @@
                 "PAUSE",
                 "SET_PLAYER_TEAM",
                 "CHANGE_TEAM_STAT",
-                "DISPLAY_MENU"
+                "DISPLAY_MENU",
+                "CLOSE_MENU"
             ]
         }
     }
