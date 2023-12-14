@@ -1,0 +1,6 @@
+[
+    {
+        "type":"SEND_MESSAGE",
+        "message": "What's up? :)"
+    }
+]
