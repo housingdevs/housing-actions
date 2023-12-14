@@ -55,13 +55,13 @@
 
         "title": { "type":"string", "maxLength": 256 },
         "subtitle": { "type":"string", "maxLength": 256 },
-        "fade_in": { "type":"integer", "maximum": 10 },
-        "stay": { "type":"integer", "maximum": 10 },
-        "fade_out": { "type":"integer", "maximum": 10 },
+        "fade_in": { "type":"integer", "minimum": 1, "maximum": 10 },
+        "stay": { "type":"integer", "minimum": 1, "maximum": 10 },
+        "fade_out": { "type":"integer", "minimum": 1, "maximum": 10 },
         
         "message": { "type":"string", "maxLength": 256 },
 
-        "max_health": { "type":"integer", "maximum": 200 },
+        "max_health": { "type":"integer", "minimum": 1, "maximum": 200 },
         "heal_on_change": { "type":"boolean" },
 
         "item": { "type":["string","null"] },
@@ -80,13 +80,13 @@
 
         "mode": { "type":"string", "enum":["INCREMENT","DECREMENT","SET","MULTIPLY","DIVIDE"] },
         "stat": { "type":"string", "maxLength": 16 },
-        "amount": { "type": ["integer","string"], "maximum": 9223372036854775807, "pattern": "%(.*)%" },
+        "amount": { "type": ["integer","string"], "maximum": 9223372036854775807, "minimum":-9223372036854775807, "pattern": "%(.*)%" },
 
         "reason": { "type":"string", "maxLength": 256 },
 
         "sound": { "type":"string" },
-        "volume": { "type":"integer", "maximum":2, "minimum": 0 },
-        "pitch": { "type":"integer", "maximum":2, "minimum": 0 },
+        "volume": { "type":"number", "maximum":2, "minimum": 0 },
+        "pitch": { "type":"number", "maximum":2, "minimum": 0 },
 
         "gamemode": { "type":"string", "enum":["ADVENTURE","SURVIVAL","CREATIVE"] },
 
