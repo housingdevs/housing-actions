@@ -44,6 +44,64 @@
                 "DISPLAY_MENU",
                 "CLOSE_MENU"
             ]
-        }
+        },
+
+        "match_any_condition": { "type":"boolean" },
+        "if_actions": { "type":"array", "items": { "$ref":"holder.schema.json" } },
+        "else_actions": { "type":"array", "items": { "$ref":"holder.schema.json" } },
+
+        "group": { "type":["string","null"] },
+        "demotion_protection": { "type":"boolean" },
+
+        "title": { "type":"string", "maxLength": 256 },
+        "subtitle": { "type":"string", "maxLength": 256 },
+        "fade_in": { "type":"integer", "maximum": 10 },
+        "stay": { "type":"integer", "maximum": 10 },
+        "fade_out": { "type":"integer", "maximum": 10 },
+        
+        "message": { "type":"string", "maxLength": 256 },
+
+        "max_health": { "type":"integer", "maximum": 200 },
+        "heal_on_change": { "type":"boolean" },
+
+        "item": { "type":["string","null"] },
+        "allow_multiple": { "type":"boolean" },
+        "inventory_slot": { "type":"integer", "maximum": 39, "minimum": -2 },
+        "replace_existing_item": { "type":"boolean" },
+
+        "effect": { "type":["integer","null"], "minimum": 1, "maximum": 22 },
+        "level": { "type":"integer", "minimum": 1, "maximum": 10 },
+        "duration": { "type":"integer", "minimum": 1, "maximum": 2592000 },
+        "override_existing_effects": { "type":"boolean" },
+
+        "levels": { "type":"integer", "minimum": 1, "maximum": 2147483647 },
+
+        "location": { "type":["string","object"], "enum": ["MAIN","TOURNAMENT","SURVIVAL_GAMES","TNTGAMES","ARCADE","UHC","MCGO","BATTLEGROUND","SUPER_SMASH","HOUSING","SKYWARS","LEGACY","PROTOTYPE","BEDWARS","MURDER_MYSTERY","BUILD_BATTLE","DUELS","WOOL_GAMES"] },
+
+        "mode": { "type":"string", "enum":["INCREMENT","DECREMENT","SET","MULTIPLY","DIVIDE"] },
+        "stat": { "type":"string", "maxLength": 16 },
+        "amount": { "type": ["integer","string"], "maximum": 9223372036854775807, "pattern": "%(.*)%" },
+
+        "reason": { "type":"string", "maxLength": 256 },
+
+        "sound": { "type":"string" },
+        "volume": { "type":"integer", "maximum":2, "minimum": 0 },
+        "pitch": { "type":"integer", "maximum":2, "minimum": 0 },
+
+        "gamemode": { "type":"string", "enum":["ADVENTURE","SURVIVAL","CREATIVE"] },
+
+        "hunger": { "type":"number", "maximum": 20, "minimum": 0 },
+        "health": { "type":"number", "maximum": 200, "minimum": 0 },
+
+        "actions": { "type":"array", "items": { "$ref":"holder.schema.json" } },
+
+        "enchantment": { "type":["integer","null"], "minimum": 0 },
+
+        "ticks_to_wait": { "type":"integer", "minimum": 1, "maximum": 6000 },
+
+        "function": { "type":["string","null"] },
+        "layout": { "type":["string","null"] },
+        "team": { "type":["string","null"] },
+        "menu": { "type":["string","null"] }
     }
 }

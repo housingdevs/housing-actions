@@ -9,6 +9,7 @@
     },
     { 
         "type":"CHANGE_PLAYER_GROUP", 
+        "group": null,
         "demotion_protection": true
     },
     { "type":"KILL" },
