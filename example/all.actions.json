@@ -1,0 +1,173 @@
+[
+    { "type":"CANCEL_EVENT" },
+    { "type":"EXIT" },
+    { 
+        "type":"CONDITIONAL", 
+        "match_any_condition": false,
+        "if_actions": [],
+        "else_actions": [] 
+    },
+    { 
+        "type":"CHANGE_PLAYER_GROUP", 
+        "demotion_protection": true
+    },
+    { "type":"KILL" },
+    { "type":"FULL_HEAL" },
+    { "type":"SPAWN" },
+    {
+        "type":"TITLE",
+        "title":"Hello World!",
+        "subtitle":"",
+        "fade_in": 1,
+        "stay": 5,
+        "fade_out": 1
+    },
+    {
+        "type":"ACTION_BAR",
+        "message":"Hello World!"
+    },
+    { "type":"RESET_INVENTORY" },
+    {
+        "type":"SET_MAX_HEALTH",
+        "max_health": 20,
+        "mode":"SET",
+        "heal_on_change": true
+    },
+    { "type":"PARKOUR_CHECKPOINT" },
+    {
+        "type":"GIVE_ITEM",
+        "item": null,
+        "allow_multiple": false,
+        "inventory_slot": -1,
+        "replace_existing_item": false
+    },
+    {
+        "type":"REMOVE_ITEM",
+        "item": null
+    },
+    {
+        "type":"SEND_MESSAGE",
+        "message":"Hello!"
+    },
+    {
+        "type":"POTION_EFFECT",
+        "effect": null,
+        "level": 1,
+        "duration": 60,
+        "override_existing_effects": false
+    },
+    { "type":"CLEAR_EFFECTS" },
+    { 
+        "type":"GIVE_EXP_LEVELS",
+        "levels": 1 
+    },
+    {
+        "type":"SEND_TO_LOBBY",
+        "location":"MAIN"
+    },
+    {
+        "type":"CHANGE_STAT",
+        "stat":"Kills",
+        "mode":"INCREMENT",
+        "amount": 1
+    },
+    {
+        "type":"CHANGE_GLOBAL_STAT",
+        "stat":"Kills",
+        "mode":"INCREMENT",
+        "amount": 1
+    },
+    {
+        "type":"TELEPORT_PLAYER",
+        "location":{
+            "relZ": 0,
+            "relY": 0,
+            "relX": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "pitch": 0,
+            "yaw": 0
+        }
+    },
+    {
+        "type":"BAIL_PARKOUR",
+        "reason":"Failed!"
+    },
+    {
+        "type":"PLAY_SOUND",
+        "sound":"AMBIENCE_CAVE",
+        "volume": 0.7,
+        "pitch": 1
+
+    },
+    {
+        "type":"SET_COMPASS_TARGET",
+        "location":{
+            "relZ": 0,
+            "relY": 0,
+            "relX": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "pitch": 0,
+            "yaw": 0
+        }
+    },
+    {
+        "type":"SET_GAMEMODE",
+        "gamemode":"CREATIVE"
+    },
+    {
+        "type":"SET_HEALTH",
+        "health": 20,
+        "mode":"SET"
+    },
+    {
+        "type":"SET_HUNGER_LEVEL",
+        "hunger": 20,
+        "mode":"SET"
+    },
+    {
+        "type":"RANDOM_ACTION",
+        "actions":[]
+    },
+    { "type":"USE_HELD_ITEM" },
+    {
+        "type":"TRIGGER_FUNCTION",
+        "function": null
+    },
+    {
+        "type":"APPLY_LAYOUT",
+        "layout": null
+    },
+    {
+        "type":"APPLY_LAYOUT",
+        "layout": null
+    },
+    {
+        "type":"ENCHANT_HELD_ITEM",
+        "enchantment": 1,
+        "level": 1
+    },
+    {
+        "type":"PAUSE",
+        "ticks_to_wait": 20
+    },
+    {
+        "type":"SET_PLAYER_TEAM",
+        "team": null
+    },
+    {
+        "type":"CHANGE_TEAM_STAT",
+        "stat":"Kills",
+        "mode":"INCREMENT",
+        "amount": 1,
+        "team": null
+    },
+    {
+        "type":"DISPLAY_MENU",
+        "menu": null
+    },
+    { "type":"CLOSE_MENU" }
+]
