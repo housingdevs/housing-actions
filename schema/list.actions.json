@@ -23,7 +23,7 @@
         "fade_out": 1
     },
     {
-        "type":"SUBTITLE",
+        "type":"ACTION_BAR",
         "message":"Hello World!"
     },
     { "type":"RESET_INVENTORY" },
