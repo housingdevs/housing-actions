@@ -55,9 +55,9 @@
 
         "title": { "type":"string", "maxLength": 256 },
         "subtitle": { "type":"string", "maxLength": 256 },
-        "fade_in": { "type":"integer", "minimum": 1, "maximum": 10 },
+        "fadein": { "type":"integer", "minimum": 1, "maximum": 10 },
         "stay": { "type":"integer", "minimum": 1, "maximum": 10 },
-        "fade_out": { "type":"integer", "minimum": 1, "maximum": 10 },
+        "fadeout": { "type":"integer", "minimum": 1, "maximum": 10 },
         
         "message": { "type":"string", "maxLength": 256 },
 
