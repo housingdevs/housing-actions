@@ -1,0 +1,86 @@
+{
+    "JOIN":{
+        "cancellable": false
+    },
+    "QUIT":{
+        "cancellable": false
+    },
+    "DEATH":{
+        "cancellable": true
+    },
+    "KILL":{
+        "cancellable": false
+    },
+    "RESPAWN":{
+        "cancellable": false
+    },
+    "GROUP_CHANGE":{
+        "cancellable": false
+    },
+    "PVP_STATE_CHANGE":{
+        "cancellable": false,
+        "extends":{
+            "conditions": [ "PVP_ENABLED" ]
+        }
+    },
+    "FISH_CAUGHT":{
+        "cancellable": true,
+        "extends":{
+            "conditions":[ "FISHING_ENVIRONMENT" ]
+        }
+    },
+    "PORTAL_USE":{
+        "cancellable": false,
+        "extends":{
+            "conditions":[ "PORTAL_TYPE" ]
+        }
+    },
+    "DAMAGE":{
+        "cancellable": true,
+        "extends":{
+            "conditions":[ "DAMAGE_CAUSE", "DAMAGE_AMOUNT" ]
+        }
+    },
+    "BLOCK_BREAK":{
+        "cancellable": false,
+        "extends":{
+            "conditions":[ "BLOCK_TYPE" ]
+        }
+    },
+    "PARKOUR_START":{
+        "cancellable": false,
+        "extends":{
+            "conditions":[ "BLOCK_TYPE" ]
+        }
+    },
+    "PARKOUR_FINISH":{
+        "cancellable": false,
+        "extends":{
+            "conditions":[ "BLOCK_TYPE" ]
+        }
+    },
+    "DROP_ITEM":{
+        "cancellable": true,
+        "extends":{
+            "conditions":[ "IS_ITEM" ]
+        }
+    },
+    "PICKUP_ITEM":{
+        "cancellable": true,
+        "extends":{
+            "conditions":[ "IS_ITEM" ]
+        }
+    },
+    "CHANGE_HELD_ITEM":{
+        "cancellable": true,
+        "extends":{
+            "conditions":[ "IS_ITEM" ]
+        }
+    },
+    "TOGGLE_SNEAK":{
+        "cancellable": true
+    },
+    "TOGGLE_FLIGHT":{
+        "cancellable": true
+    }
+}
