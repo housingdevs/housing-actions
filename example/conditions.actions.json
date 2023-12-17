@@ -1,0 +1,91 @@
+[
+    { 
+        "type":"CONDITIONAL", 
+        "conditions":[
+            {
+                "type":"CHANGE_GROUP",
+                "required_group": null,
+                "include_higher_groups": false
+            },
+            {
+                "type":"PLAYER_STAT_REQUIREMENT",
+                "stat":"Kills",
+                "mode":"EQUAL",
+                "amount": 1
+            },
+            {
+                "type":"GLOBAL_STAT_REQUIREMENT",
+                "stat":"Kills",
+                "mode":"EQUAL",
+                "amount": 1
+            },
+            {
+                "type":"REQUIRED_PERMISSION",
+                "required_permission": null
+            },
+            {
+                "type":"WITHIN_REGION",
+                "region": null
+            },
+            {
+                "type":"HAS_ITEM",
+                "item": null,
+                "what_to_check":"Metadata",
+                "where_to_check":"Anywhere",
+                "required_amount":"Any"
+            },
+            {
+                "type":"DOING_PARKOUR"
+            },
+            {
+                "type":"HAS_POTION_EFFECT",
+                "effect": null
+            },
+            {
+                "type":"PLAYER_SNEAKING"
+            },
+            {
+                "type":"PLAYER_FLYING"
+            },
+            {
+                "type":"PLAYER_HEALTH",
+                "mode":"EQUAL",
+                "amount": null
+            },
+            {
+                "type":"MAX_PLAYER_HEALTH",
+                "mode":"EQUAL",
+                "amount": null
+            },
+            {
+                "type":"PLAYER_HUNGER",
+                "mode":"EQUAL",
+                "amount": null
+            },
+            {
+                "type":"REQUIRED_GAMEMODE",
+                "required_gamemode": null
+            },
+            {
+                "type":"PLACEHOLDER_NUMBER_REQUIREMENT",
+                "placeholder": null,
+                "mode":"EQUAL",
+                "amount": 1
+            },
+            {
+                "type":"REQUIRED_TEAM",
+                "required_team":"None"
+            },
+            {
+                "type":"TEAM_STAT_REQUIREMENT",
+                "stat":"Kills",
+                "team":"None",
+                "mode":"EQUAL",
+                "amount": 1
+            }
+        ],
+        "match_any_condition": false,
+        "if_actions": [],
+        "else_actions": [] 
+    }
+]
