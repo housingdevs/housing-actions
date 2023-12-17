@@ -8,13 +8,13 @@
                 "include_higher_groups": false
             },
             {
-                "type":"PLAYER_STAT_REQUIREMENT",
+                "type":"PLAYER_STAT",
                 "stat":"Kills",
                 "mode":"EQUAL",
                 "amount": 1
             },
             {
-                "type":"GLOBAL_STAT_REQUIREMENT",
+                "type":"GLOBAL_STAT",
                 "stat":"Kills",
                 "mode":"EQUAL",
                 "amount": 1
@@ -24,7 +24,7 @@
                 "required_permission": null
             },
             {
-                "type":"WITHIN_REGION",
+                "type":"IN_REGION",
                 "region": null
             },
             {
@@ -38,7 +38,7 @@
                 "type":"DOING_PARKOUR"
             },
             {
-                "type":"HAS_POTION_EFFECT",
+                "type":"POTION_EFFECT",
                 "effect": null
             },
             {
@@ -67,7 +67,7 @@
                 "required_gamemode": null
             },
             {
-                "type":"PLACEHOLDER_NUMBER_REQUIREMENT",
+                "type":"PLACEHOLDER_NUMBER",
                 "placeholder": null,
                 "mode":"EQUAL",
                 "amount": 1
@@ -77,7 +77,7 @@
                 "required_team":"None"
             },
             {
-                "type":"TEAM_STAT_REQUIREMENT",
+                "type":"TEAM_STAT",
                 "stat":"Kills",
                 "team":"None",
                 "mode":"EQUAL",
