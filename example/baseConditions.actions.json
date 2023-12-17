@@ -3,7 +3,7 @@
         "type":"CONDITIONAL", 
         "conditions":[
             {
-                "type":"CHANGE_GROUP",
+                "type":"IN_GROUP",
                 "required_group": null,
                 "include_higher_groups": false
             },
@@ -20,7 +20,7 @@
                 "amount": 1
             },
             {
-                "type":"REQUIRED_PERMISSION",
+                "type":"HAS_PERMISSION",
                 "required_permission": null
             },
             {
@@ -35,35 +35,35 @@
                 "required_amount":"Any"
             },
             {
-                "type":"DOING_PARKOUR"
+                "type":"IN_PARKOUR"
             },
             {
                 "type":"POTION_EFFECT",
                 "effect": null
             },
             {
-                "type":"PLAYER_SNEAKING"
+                "type":"SNEAKING"
             },
             {
-                "type":"PLAYER_FLYING"
+                "type":"FLYING"
             },
             {
-                "type":"PLAYER_HEALTH",
+                "type":"HEALTH",
                 "mode":"EQUAL",
                 "amount": null
             },
             {
-                "type":"MAX_PLAYER_HEALTH",
+                "type":"MAX_HEALTH",
                 "mode":"EQUAL",
                 "amount": null
             },
             {
-                "type":"PLAYER_HUNGER",
+                "type":"HUNGER_LEVEL",
                 "mode":"EQUAL",
                 "amount": null
             },
             {
-                "type":"REQUIRED_GAMEMODE",
+                "type":"GAMEMODE",
                 "required_gamemode": null
             },
             {
@@ -73,7 +73,7 @@
                 "amount": 1
             },
             {
-                "type":"REQUIRED_TEAM",
+                "type":"IN_TEAM",
                 "required_team":"None"
             },
             {
