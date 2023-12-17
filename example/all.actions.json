@@ -3,6 +3,7 @@
     { "type":"EXIT" },
     { 
         "type":"CONDITIONAL", 
+        "conditions":[],
         "match_any_condition": false,
         "if_actions": [],
         "else_actions": [] 
