@@ -1,4 +1,7 @@
-type Action =
+import { Condition } from './conditions';
+import { Coordinates, GameMode, StatMode } from './util';
+
+export type Action =
     | ConditionalAction
     | CancelEventAction
     | ExitAction
@@ -38,7 +41,7 @@ type Action =
     | DisplayMenuAction
     | CloseMenuAction;
 
-type ActionType =
+export type ActionType =
     | 'CONDITIONAL'
     | 'CANCEL_EVENT'
     | 'EXIT'
@@ -78,55 +81,41 @@ type ActionType =
     | 'DISPLAY_MENU'
     | 'CLOSE_MENU';
 
-type Coordinates = {
-    relZ: number;
-    relY: number;
-    relX: number;
-    x: number;
-    y: number;
-    z: number;
-    pitch: number;
-    yaw: number;
-};
-
-type StatMode = 'INCREMENT' | 'DECREMENT' | 'SET' | 'MULTIPLY' | 'DIVIDE';
-
-type GameMode = 'ADVENTURE' | 'SURVIVAL' | 'CREATIVE';
-
-type ConditionalAction = {
+export type ConditionalAction = {
     type: 'CONDITIONAL';
+    conditions: Condition[];
     match_any_condition: boolean;
     if_actions: Action[];
     else_actions: Action[];
 };
 
-type CancelEventAction = {
+export type CancelEventAction = {
     type: 'CANCEL_EVENT';
 };
 
-type ExitAction = {
+export type ExitAction = {
     type: 'EXIT';
 };
 
-type ChangePlayerGroupAction = {
+export type ChangePlayerGroupAction = {
     type: 'CHANGE_PLAYER_GROUP';
     group: string | null;
     demotion_protection: boolean;
 };
 
-type KillAction = {
+export type KillAction = {
     type: 'KILL';
 };
 
-type FullHealAction = {
+export type FullHealAction = {
     type: 'FULL_HEAL';
 };
 
-type SpawnAction = {
+export type SpawnAction = {
     type: 'SPAWN';
 };
 
-type TitleAction = {
+export type TitleAction = {
     type: 'TITLE';
     title: string;
     subtitle: string;
@@ -135,26 +124,26 @@ type TitleAction = {
     fadeout: number;
 };
 
-type ActionBarAction = {
+export type ActionBarAction = {
     type: 'ACTION_BAR';
     message: string;
 };
 
-type ResetInventoryAction = {
+export type ResetInventoryAction = {
     type: 'RESET_INVENTORY';
 };
 
-type SetMaxHealthAction = {
+export type SetMaxHealthAction = {
     type: 'SET_MAX_HEALTH';
     max_health: number;
     heal_on_change: boolean;
 };
 
-type ParkourCheckpointAction = {
+export type ParkourCheckpointAction = {
     type: 'PARKOUR_CHECKPOINT';
 };
 
-type GiveItemAction = {
+export type GiveItemAction = {
     type: 'GIVE_ITEM';
     item: string | null;
     allow_multiple: boolean;
@@ -162,17 +151,17 @@ type GiveItemAction = {
     replace_existing_item: boolean;
 };
 
-type RemoveItemAction = {
+export type RemoveItemAction = {
     type: 'REMOVE_ITEM';
     item: string | null;
 };
 
-type SendMessageAction = {
+export type SendMessageAction = {
     type: 'SEND_MESSAGE';
     message: string;
 };
 
-type PotionEffectAction = {
+export type PotionEffectAction = {
     type: 'POTION_EFFECT';
     effect: number | null;
     level: number;
@@ -180,119 +169,119 @@ type PotionEffectAction = {
     override_existing_effects: boolean;
 };
 
-type ClearEffectsAction = {
+export type ClearEffectsAction = {
     type: 'CLEAR_EFFECTS';
 };
 
-type GiveExpLevelsAction = {
+export type GiveExpLevelsAction = {
     type: 'GIVE_EXP_LEVELS';
     levels: number;
 };
 
-type SendToLobbyAction = {
+export type SendToLobbyAction = {
     type: 'SEND_TO_LOBBY';
     location: string;
 };
 
-type ChangeStatAction = {
+export type ChangeStatAction = {
     type: 'CHANGE_STAT';
     mode: StatMode;
     stat: string;
-    amount: number | string; // Might need a custom type for pattern "%(.*)%"
+    amount: number | string; // Might need a custom export type for pattern "%(.*)%"
 };
 
-type ChangeGlobalStatAction = {
+export type ChangeGlobalStatAction = {
     type: 'CHANGE_GLOBAL_STAT';
     mode: StatMode;
     stat: string;
-    amount: number | string; // Might need a custom type for pattern "%(.*)%"
+    amount: number | string; // Might need a custom export type for pattern "%(.*)%"
 };
 
-type TeleportPlayerAction = {
+export type TeleportPlayerAction = {
     type: 'TELEPORT_PLAYER';
     location: Coordinates;
 };
 
-type BailParkourAction = {
+export type BailParkourAction = {
     type: 'BAIL_PARKOUR';
     reason: string;
 };
 
-type PlaySoundAction = {
+export type PlaySoundAction = {
     type: 'PLAY_SOUND';
     sound: string;
     volume: number;
     pitch: number;
 };
 
-type SetCompassTargetAction = {
+export type SetCompassTargetAction = {
     type: 'SET_COMPASS_TARGET';
     location: Coordinates;
 };
 
-type SetGameModeAction = {
+export type SetGameModeAction = {
     type: 'SET_GAMEMODE';
     gamemode: GameMode;
 };
 
-type SetHealthAction = {
+export type SetHealthAction = {
     type: 'SET_HEALTH';
     health: number;
 };
 
-type SetHungerLevelAction = {
+export type SetHungerLevelAction = {
     type: 'SET_HUNGER_LEVEL';
     hunger: number;
 };
 
-type RandomActionAction = {
+export type RandomActionAction = {
     type: 'RANDOM_ACTION';
     actions: Action[];
 };
 
-type UseHeldItemAction = {
+export type UseHeldItemAction = {
     type: 'USE_HELD_ITEM';
 };
 
-type TriggerFunctionAction = {
+export type TriggerFunctionAction = {
     type: 'TRIGGER_FUNCTION';
     function: string | null;
 };
 
-type ApplyLayoutAction = {
+export type ApplyLayoutAction = {
     type: 'APPLY_LAYOUT';
     layout: string | null;
 };
 
-type EnchantHeldItemAction = {
+export type EnchantHeldItemAction = {
     type: 'ENCHANT_HELD_ITEM';
     enchantment: number | null;
     level: number;
 };
 
-type PauseAction = {
+export type PauseAction = {
     type: 'PAUSE';
     ticks_to_wait: number;
 };
 
-type SetPlayerTeamAction = {
+export type SetPlayerTeamAction = {
     type: 'SET_PLAYER_TEAM';
     team: string | null;
 };
 
-type ChangeTeamStatAction = {
+export type ChangeTeamStatAction = {
     type: 'CHANGE_TEAM_STAT';
     stat: string;
     mode: StatMode;
-    amount: number | string; // Might need a custom type for pattern "%(.*)%"
+    amount: number | string; // Might need a custom export type for pattern "%(.*)%"
     team: string | null;
 };
 
-type DisplayMenuAction = {
+export type DisplayMenuAction = {
     type: 'DISPLAY_MENU';
     menu: string | null;
 };
 
-type CloseMenuAction = {
+export type CloseMenuAction = {
     type: 'CLOSE_MENU';
 };
