@@ -83,7 +83,7 @@ export enum ActionType {
 }
 
 export type ConditionalAction = {
-    type: 'CONDITIONAL';
+    type: ActionType.CONDITIONAL;
     conditions: Condition[];
     match_any_condition: boolean;
     if_actions: Action[];
@@ -91,33 +91,33 @@ export type ConditionalAction = {
 };
 
 export type CancelEventAction = {
-    type: 'CANCEL_EVENT';
+    type: ActionType.CANCEL_EVENT;
 };
 
 export type ExitAction = {
-    type: 'EXIT';
+    type: ActionType.EXIT;
 };
 
 export type ChangePlayerGroupAction = {
-    type: 'CHANGE_PLAYER_GROUP';
+    type: ActionType.CHANGE_PLAYER_GROUP;
     group: string;
     demotion_protection: boolean;
 };
 
 export type KillAction = {
-    type: 'KILL';
+    type: ActionType.KILL;
 };
 
 export type FullHealAction = {
-    type: 'FULL_HEAL';
+    type: ActionType.FULL_HEAL;
 };
 
 export type SpawnAction = {
-    type: 'SPAWN';
+    type: ActionType.SPAWN;
 };
 
 export type TitleAction = {
-    type: 'TITLE';
+    type: ActionType.TITLE;
     title: string;
     subtitle: string;
     fadein: number;
@@ -126,26 +126,26 @@ export type TitleAction = {
 };
 
 export type ActionBarAction = {
-    type: 'ACTION_BAR';
+    type: ActionType.ACTION_BAR;
     message: string;
 };
 
 export type ResetInventoryAction = {
-    type: 'RESET_INVENTORY';
+    type: ActionType.RESET_INVENTORY;
 };
 
 export type SetMaxHealthAction = {
-    type: 'SET_MAX_HEALTH';
+    type: ActionType.SET_MAX_HEALTH;
     max_health: number;
     heal_on_change: boolean;
 };
 
 export type ParkourCheckpointAction = {
-    type: 'PARKOUR_CHECKPOINT';
+    type: ActionType.PARKOUR_CHECKPOINT;
 };
 
 export type GiveItemAction = {
-    type: 'GIVE_ITEM';
+    type: ActionType.GIVE_ITEM;
     item: string;
     allow_multiple: boolean;
     inventory_slot: number;
@@ -153,17 +153,17 @@ export type GiveItemAction = {
 };
 
 export type RemoveItemAction = {
-    type: 'REMOVE_ITEM';
+    type: ActionType.REMOVE_ITEM;
     item: string;
 };
 
 export type SendMessageAction = {
-    type: 'SEND_MESSAGE';
+    type: ActionType.SEND_MESSAGE;
     message: string;
 };
 
 export type PotionEffectAction = {
-    type: 'POTION_EFFECT';
+    type: ActionType.POTION_EFFECT;
     effect: number;
     level: number;
     duration: number;
@@ -171,107 +171,107 @@ export type PotionEffectAction = {
 };
 
 export type ClearEffectsAction = {
-    type: 'CLEAR_EFFECTS';
+    type: ActionType.CLEAR_EFFECTS;
 };
 
 export type GiveExpLevelsAction = {
-    type: 'GIVE_EXP_LEVELS';
+    type: ActionType.GIVE_EXP_LEVELS;
     levels: number;
 };
 
 export type SendToLobbyAction = {
-    type: 'SEND_TO_LOBBY';
+    type: ActionType.SEND_TO_LOBBY;
     location: string;
 };
 
 export type ChangeStatAction = {
-    type: 'CHANGE_STAT';
+    type: ActionType.CHANGE_STAT;
     mode: StatMode;
     stat: string;
     amount: number | string; // Might need a custom export type for pattern "%(.*)%"
 };
 
 export type ChangeGlobalStatAction = {
-    type: 'CHANGE_GLOBAL_STAT';
+    type: ActionType.CHANGE_GLOBAL_STAT;
     mode: StatMode;
     stat: string;
     amount: number | string; // Might need a custom export type for pattern "%(.*)%"
 };
 
 export type TeleportPlayerAction = {
-    type: 'TELEPORT_PLAYER';
+    type: ActionType.TELEPORT_PLAYER;
     location: Coordinates;
 };
 
 export type BailParkourAction = {
-    type: 'BAIL_PARKOUR';
+    type: ActionType.BAIL_PARKOUR;
     reason: string;
 };
 
 export type PlaySoundAction = {
-    type: 'PLAY_SOUND';
+    type: ActionType.PLAY_SOUND;
     sound: string;
     volume: number;
     pitch: number;
 };
 
 export type SetCompassTargetAction = {
-    type: 'SET_COMPASS_TARGET';
+    type: ActionType.SET_COMPASS_TARGET;
     location: Coordinates;
 };
 
 export type SetGameModeAction = {
-    type: 'SET_GAMEMODE';
+    type: ActionType.SET_GAME_MODE;
     gamemode: GameMode;
 };
 
 export type SetHealthAction = {
-    type: 'SET_HEALTH';
+    type: ActionType.SET_HEALTH;
     health: number;
 };
 
 export type SetHungerLevelAction = {
-    type: 'SET_HUNGER_LEVEL';
+    type: ActionType.SET_HUNGER_LEVEL;
     hunger: number;
 };
 
 export type RandomActionAction = {
-    type: 'RANDOM_ACTION';
+    type: ActionType.RANDOM_ACTION;
     actions: Action[];
 };
 
 export type UseHeldItemAction = {
-    type: 'USE_HELD_ITEM';
+    type: ActionType.USE_HELD_ITEM;
 };
 
 export type TriggerFunctionAction = {
-    type: 'TRIGGER_FUNCTION';
+    type: ActionType.TRIGGER_FUNCTION;
     function: string;
 };
 
 export type ApplyLayoutAction = {
-    type: 'APPLY_LAYOUT';
+    type: ActionType.APPLY_LAYOUT;
     layout: string;
 };
 
 export type EnchantHeldItemAction = {
-    type: 'ENCHANT_HELD_ITEM';
+    type: ActionType.ENCHANT_HELD_ITEM;
     enchantment: number;
     level: number;
 };
 
 export type PauseAction = {
-    type: 'PAUSE';
+    type: ActionType.PAUSE;
     ticks_to_wait: number;
 };
 
 export type SetPlayerTeamAction = {
-    type: 'SET_PLAYER_TEAM';
+    type: ActionType.SET_PLAYER_TEAM;
     team: string;
 };
 
 export type ChangeTeamStatAction = {
-    type: 'CHANGE_TEAM_STAT';
+    type: ActionType.CHANGE_TEAM_STAT;
     stat: string;
     mode: StatMode;
     amount: number | string; // Might need a custom export type for pattern "%(.*)%"
@@ -279,10 +279,10 @@ export type ChangeTeamStatAction = {
 };
 
 export type DisplayMenuAction = {
-    type: 'DISPLAY_MENU';
+    type: ActionType.DISPLAY_MENU;
     menu: string;
 };
 
 export type CloseMenuAction = {
-    type: 'CLOSE_MENU';
+    type: ActionType.CLOSE_MENU;
 };

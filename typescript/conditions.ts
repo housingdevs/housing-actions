@@ -1,6 +1,5 @@
 import { GameMode, StatMode } from './util';
 
-// Condition Types
 export type Condition =
     | InGroupCondition
     | PlayerStatCondition
@@ -38,40 +37,47 @@ export enum ConditionType {
     PLACEHOLDER_NUMBER = 'PLACEHOLDER_NUMBER',
     IN_TEAM = 'IN_TEAM',
     TEAM_STAT = 'TEAM_STAT',
+    PVP_ENABLED = 'PVP_ENABLED',
+    FISHING_ENVIRONMENT = 'FISHING_ENVIRONMENT',
+    PORTAL_TYPE = 'PORTAL_TYPE',
+    DAMAGE_CAUSE = 'DAMAGE_CAUSE',
+    DAMAGE_AMOUNT = 'DAMAGE_AMOUNT',
+    BLOCK_TYPE = 'BLOCK_TYPE',
+    IS_ITEM = 'IS_ITEM',
 }
 
 export type InGroupCondition = {
-    type: 'IN_GROUP';
+    type: ConditionType.IN_GROUP;
     required_group: string;
     include_higher_groups: boolean;
 };
 
 export type PlayerStatCondition = {
-    type: 'PLAYER_STAT';
+    type: ConditionType.PLAYER_STAT;
     stat: string;
     mode: StatMode;
     amount: number;
 };
 
 export type GlobalStatCondition = {
-    type: 'GLOBAL_STAT';
+    type: ConditionType.GLOBAL_STAT;
     stat: string;
     mode: StatMode;
     amount: number;
 };
 
 export type HasPermissionCondition = {
-    type: 'HAS_PERMISSION';
+    type: ConditionType.HAS_PERMISSION;
     required_permission: string;
 };
 
 export type InRegionCondition = {
-    type: 'IN_REGION';
+    type: ConditionType.IN_REGION;
     region: string;
 };
 
 export type HasItemCondition = {
-    type: 'HAS_ITEM';
+    type: ConditionType.HAS_ITEM;
     item: string;
     what_to_check: 'Metadata' | 'AnotherOption'; // Adjust with actual options
     where_to_check: 'Anywhere' | 'AnotherOption'; // Adjust with actual options
@@ -79,59 +85,59 @@ export type HasItemCondition = {
 };
 
 export type InParkourCondition = {
-    type: 'IN_PARKOUR';
+    type: ConditionType.IN_PARKOUR;
 };
 
 export type PotionEffectCondition = {
-    type: 'POTION_EFFECT';
+    type: ConditionType.POTION_EFFECT;
     effect: number;
 };
 
 export type SneakingCondition = {
-    type: 'SNEAKING';
+    type: ConditionType.SNEAKING;
 };
 
 export type FlyingCondition = {
-    type: 'FLYING';
+    type: ConditionType.FLYING;
 };
 
 export type HealthCondition = {
-    type: 'HEALTH';
+    type: ConditionType.HEALTH;
     mode: StatMode;
     amount: number;
 };
 
 export type MaxHealthCondition = {
-    type: 'MAX_HEALTH';
+    type: ConditionType.MAX_HEALTH;
     mode: StatMode;
     amount: number;
 };
 
 export type HungerLevelCondition = {
-    type: 'HUNGER_LEVEL';
+    type: ConditionType.HUNGER_LEVEL;
     mode: StatMode;
     amount: number;
 };
 
 export type GameModeCondition = {
-    type: 'GAMEMODE';
+    type: ConditionType.GAMEMODE;
     required_gamemode: GameMode;
 };
 
 export type PlaceholderNumberCondition = {
-    type: 'PLACEHOLDER_NUMBER';
+    type: ConditionType.PLACEHOLDER_NUMBER;
     placeholder: string;
     mode: StatMode;
     amount: number;
 };
 
 export type InTeamCondition = {
-    type: 'IN_TEAM';
+    type: ConditionType.IN_TEAM;
     required_team: string;
 };
 
 export type TeamStatCondition = {
-    type: 'TEAM_STAT';
+    type: ConditionType.TEAM_STAT;
     stat: string;
     team: string;
     mode: StatMode;
