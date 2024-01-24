@@ -42,7 +42,7 @@ export type ConditionType =
 
 export type InGroupCondition = {
     type: 'IN_GROUP';
-    required_group: string | null;
+    required_group: string;
     include_higher_groups: boolean;
 };
 
@@ -62,17 +62,17 @@ export type GlobalStatCondition = {
 
 export type HasPermissionCondition = {
     type: 'HAS_PERMISSION';
-    required_permission: string | null;
+    required_permission: string;
 };
 
 export type InRegionCondition = {
     type: 'IN_REGION';
-    region: string | null;
+    region: string;
 };
 
 export type HasItemCondition = {
     type: 'HAS_ITEM';
-    item: string | null;
+    item: string;
     what_to_check: 'Metadata' | 'AnotherOption'; // Adjust with actual options
     where_to_check: 'Anywhere' | 'AnotherOption'; // Adjust with actual options
     required_amount: 'Any' | number; // Adjust if there are more specific types
@@ -84,7 +84,7 @@ export type InParkourCondition = {
 
 export type PotionEffectCondition = {
     type: 'POTION_EFFECT';
-    effect: number | null;
+    effect: number;
 };
 
 export type SneakingCondition = {
@@ -98,42 +98,42 @@ export type FlyingCondition = {
 export type HealthCondition = {
     type: 'HEALTH';
     mode: StatMode;
-    amount: number | null;
+    amount: number;
 };
 
 export type MaxHealthCondition = {
     type: 'MAX_HEALTH';
     mode: StatMode;
-    amount: number | null;
+    amount: number;
 };
 
 export type HungerLevelCondition = {
     type: 'HUNGER_LEVEL';
     mode: StatMode;
-    amount: number | null;
+    amount: number;
 };
 
 export type GameModeCondition = {
     type: 'GAMEMODE';
-    required_gamemode: GameMode | null;
+    required_gamemode: GameMode;
 };
 
 export type PlaceholderNumberCondition = {
     type: 'PLACEHOLDER_NUMBER';
-    placeholder: string | null;
+    placeholder: string;
     mode: StatMode;
     amount: number;
 };
 
 export type InTeamCondition = {
     type: 'IN_TEAM';
-    required_team: string | null;
+    required_team: string;
 };
 
 export type TeamStatCondition = {
     type: 'TEAM_STAT';
     stat: string;
-    team: string | null;
+    team: string;
     mode: StatMode;
     amount: number;
 };

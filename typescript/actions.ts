@@ -99,7 +99,7 @@ export type ExitAction = {
 
 export type ChangePlayerGroupAction = {
     type: 'CHANGE_PLAYER_GROUP';
-    group: string | null;
+    group: string;
     demotion_protection: boolean;
 };
 
@@ -145,7 +145,7 @@ export type ParkourCheckpointAction = {
 
 export type GiveItemAction = {
     type: 'GIVE_ITEM';
-    item: string | null;
+    item: string;
     allow_multiple: boolean;
     inventory_slot: number;
     replace_existing_item: boolean;
@@ -153,7 +153,7 @@ export type GiveItemAction = {
 
 export type RemoveItemAction = {
     type: 'REMOVE_ITEM';
-    item: string | null;
+    item: string;
 };
 
 export type SendMessageAction = {
@@ -163,7 +163,7 @@ export type SendMessageAction = {
 
 export type PotionEffectAction = {
     type: 'POTION_EFFECT';
-    effect: number | null;
+    effect: number;
     level: number;
     duration: number;
     override_existing_effects: boolean;
@@ -245,17 +245,17 @@ export type UseHeldItemAction = {
 
 export type TriggerFunctionAction = {
     type: 'TRIGGER_FUNCTION';
-    function: string | null;
+    function: string;
 };
 
 export type ApplyLayoutAction = {
     type: 'APPLY_LAYOUT';
-    layout: string | null;
+    layout: string;
 };
 
 export type EnchantHeldItemAction = {
     type: 'ENCHANT_HELD_ITEM';
-    enchantment: number | null;
+    enchantment: number;
     level: number;
 };
 
@@ -266,7 +266,7 @@ export type PauseAction = {
 
 export type SetPlayerTeamAction = {
     type: 'SET_PLAYER_TEAM';
-    team: string | null;
+    team: string;
 };
 
 export type ChangeTeamStatAction = {
@@ -274,12 +274,12 @@ export type ChangeTeamStatAction = {
     stat: string;
     mode: StatMode;
     amount: number | string; // Might need a custom export type for pattern "%(.*)%"
-    team: string | null;
+    team: string;
 };
 
 export type DisplayMenuAction = {
     type: 'DISPLAY_MENU';
-    menu: string | null;
+    menu: string;
 };
 
 export type CloseMenuAction = {
