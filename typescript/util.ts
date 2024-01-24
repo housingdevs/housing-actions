@@ -9,11 +9,16 @@ export type Coordinates = {
     yaw: number;
 };
 
-export type StatMode =
-    | 'INCREMENT'
-    | 'DECREMENT'
-    | 'SET'
-    | 'MULTIPLY'
-    | 'DIVIDE';
+export enum StatMode {
+    INCREMENT = 'INCREMENT',
+    DECREMENT = 'DECREMENT',
+    SET = 'SET',
+    MULTIPLY = 'MULTIPLY',
+    DIVIDE = 'DIVIDE',
+}
 
-export type GameMode = 'ADVENTURE' | 'SURVIVAL' | 'CREATIVE';
+export enum GameMode {
+    ADVENTURE = 'ADVENTURE',
+    SURVIVAL = 'SURVIVAL',
+    CREATIVE = 'CREATIVE',
+}

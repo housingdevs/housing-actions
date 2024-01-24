@@ -20,25 +20,25 @@ export type Condition =
     | InTeamCondition
     | TeamStatCondition;
 
-// Condition Enum
-export type ConditionType =
-    | 'IN_GROUP'
-    | 'PLAYER_STAT'
-    | 'GLOBAL_STAT'
-    | 'HAS_PERMISSION'
-    | 'IN_REGION'
-    | 'HAS_ITEM'
-    | 'IN_PARKOUR'
-    | 'POTION_EFFECT'
-    | 'SNEAKING'
-    | 'FLYING'
-    | 'HEALTH'
-    | 'MAX_HEALTH'
-    | 'HUNGER_LEVEL'
-    | 'GAMEMODE'
-    | 'PLACEHOLDER_NUMBER'
-    | 'IN_TEAM'
-    | 'TEAM_STAT';
+export enum ConditionType {
+    IN_GROUP = 'IN_GROUP',
+    PLAYER_STAT = 'PLAYER_STAT',
+    GLOBAL_STAT = 'GLOBAL_STAT',
+    HAS_PERMISSION = 'HAS_PERMISSION',
+    IN_REGION = 'IN_REGION',
+    HAS_ITEM = 'HAS_ITEM',
+    IN_PARKOUR = 'IN_PARKOUR',
+    POTION_EFFECT = 'POTION_EFFECT',
+    SNEAKING = 'SNEAKING',
+    FLYING = 'FLYING',
+    HEALTH = 'HEALTH',
+    MAX_HEALTH = 'MAX_HEALTH',
+    HUNGER_LEVEL = 'HUNGER_LEVEL',
+    GAMEMODE = 'GAMEMODE',
+    PLACEHOLDER_NUMBER = 'PLACEHOLDER_NUMBER',
+    IN_TEAM = 'IN_TEAM',
+    TEAM_STAT = 'TEAM_STAT',
+}
 
 export type InGroupCondition = {
     type: 'IN_GROUP';
