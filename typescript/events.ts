@@ -1,4 +1,5 @@
 import { ConditionType } from './conditions';
+import { ActionType } from './actions';
 
 export enum EventType {
     JOIN = 'JOIN',
@@ -25,7 +26,8 @@ export type Event = {
     type: EventType;
     cancellable: boolean;
     extendsConditions?: ConditionType[];
-};
+    overrideActions?: ActionType[]; // Exists currently for the Player Quit event!
+};                                  // if this is defined, assume only these actions are allowed in the event.
 
 export const JoinEvent: Event = {
     type: EventType.JOIN,
@@ -35,6 +37,15 @@ export const JoinEvent: Event = {
 export const QuitEvent: Event = {
     type: EventType.QUIT,
     cancellable: false,
+    overrideActions: [
+        ActionType.CONDITIONAL, 
+        ActionType.CHANGE_STAT,
+        ActionType.CHANGE_GLOBAL_STAT,
+        ActionType.RANDOM_ACTION,
+        ActionType.TRIGGER_FUNCTION,
+        ActionType.PAUSE,
+        ActionType.CHANGE_TEAM_STAT
+    ]
 };
 
 export const DeathEvent: Event = {
