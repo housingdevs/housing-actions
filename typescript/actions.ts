@@ -24,13 +24,13 @@ export type Action =
     | ChangeStatAction
     | ChangeGlobalStatAction
     | TeleportPlayerAction
-    | BailParkourAction
+    | FailParkourAction
     | PlaySoundAction
     | SetCompassTargetAction
     | SetGameModeAction
     | SetHealthAction
     | SetHungerLevelAction
-    | RandomActionAction
+    | RandomAction
     | UseHeldItemAction
     | TriggerFunctionAction
     | ApplyLayoutAction
@@ -203,7 +203,8 @@ export type TeleportPlayerAction = {
     location: Coordinates;
 };
 
-export type BailParkourAction = {
+ // Bail Parkour is internal name. Displays as fail parkour, so we use that for convenience.
+export type FailParkourAction = {
     type: ActionType.BAIL_PARKOUR;
     reason: string;
 };
@@ -235,7 +236,7 @@ export type SetHungerLevelAction = {
     hunger: number;
 };
 
-export type RandomActionAction = {
+export type RandomAction = {
     type: ActionType.RANDOM_ACTION;
     actions: Action[];
 };
