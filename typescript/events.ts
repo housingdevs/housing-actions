@@ -25,9 +25,10 @@ export enum EventType {
 export type Event = {
     type: EventType;
     cancellable: boolean;
-    extendsConditions?: ConditionType[];
-    overrideActions?: ActionType[]; // Exists currently for the Player Quit event!
-};                                  // if this is defined, assume only these actions are allowed in the event.
+    extendsConditions?: ConditionType[]; // Conditions only usable in this event
+    blacklistActions?: ActionType[]; // If defined, these actions are not allowed to be used
+    whitelistActions?: ActionType[]; // If defined, these are the only allowed actions
+};                                  
 
 export const JoinEvent: Event = {
     type: EventType.JOIN,
