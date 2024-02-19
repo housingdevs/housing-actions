@@ -28,8 +28,8 @@ export type Action =
     | PlaySoundAction
     | SetCompassTargetAction
     | SetGameModeAction
-    | SetHealthAction
-    | SetHungerLevelAction
+    | ChangeHealthAction
+    | ChangeHungerLevelAction
     | RandomAction
     | UseHeldItemAction
     | TriggerFunctionAction
@@ -65,11 +65,14 @@ export enum ActionType {
     CHANGE_GLOBAL_STAT = 'CHANGE_GLOBAL_STAT',
     TELEPORT_PLAYER = 'TELEPORT_PLAYER',
     BAIL_PARKOUR = 'BAIL_PARKOUR',
+    FAIL_PARKOUR = 'BAIL_PARKOUR', // alias
     PLAY_SOUND = 'PLAY_SOUND',
     SET_COMPASS_TARGET = 'SET_COMPASS_TARGET',
     SET_GAME_MODE = 'SET_GAME_MODE',
     SET_HEALTH = 'SET_HEALTH',
     SET_HUNGER_LEVEL = 'SET_HUNGER_LEVEL',
+    CHANGE_HEALTH = 'SET_HEALTH', // alias
+    CHANGE_HUNGER_LEVEL = 'SET_HUNGER_LEVEL', // alias
     RANDOM_ACTION = 'RANDOM_ACTION',
     USE_HELD_ITEM = 'USE_HELD_ITEM',
     TRIGGER_FUNCTION = 'TRIGGER_FUNCTION',
@@ -226,12 +229,12 @@ export type SetGameModeAction = {
     gamemode: GameMode;
 };
 
-export type SetHealthAction = {
+export type ChangeHealthAction = {
     type: ActionType.SET_HEALTH;
     health: number;
 };
 
-export type SetHungerLevelAction = {
+export type ChangeHungerLevelAction = {
     type: ActionType.SET_HUNGER_LEVEL;
     hunger: number;
 };
