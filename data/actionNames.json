@@ -21,7 +21,7 @@
     "CHANGE_STAT":"Change Player Stat",
     "CHANGE_GLOBAL_STAT":"Change Global Stat",
     "TELEPORT_PLAYER":"Teleport Player",
-    "BAIL_PARKOUR":"Fail Parkour",
+    "FAIL_PARKOUR":"Fail Parkour",
     "PLAY_SOUND":"Play Sound",
     "SET_COMPASS_TARGET":"Set Compass Target",
     "SET_GAMEMODE":"Set Gamemode",
